@@ -1,0 +1,10 @@
+D:\Repo\TrainPattern\TrainPattern\bin\Debug\netcoreapp2.1\TrainPattern.deps.json
+D:\Repo\TrainPattern\TrainPattern\bin\Debug\netcoreapp2.1\TrainPattern.runtimeconfig.json
+D:\Repo\TrainPattern\TrainPattern\bin\Debug\netcoreapp2.1\TrainPattern.runtimeconfig.dev.json
+D:\Repo\TrainPattern\TrainPattern\bin\Debug\netcoreapp2.1\TrainPattern.dll
+D:\Repo\TrainPattern\TrainPattern\bin\Debug\netcoreapp2.1\TrainPattern.pdb
+D:\Repo\TrainPattern\TrainPattern\obj\Debug\netcoreapp2.1\TrainPattern.csprojAssemblyReference.cache
+D:\Repo\TrainPattern\TrainPattern\obj\Debug\netcoreapp2.1\TrainPattern.AssemblyInfoInputs.cache
+D:\Repo\TrainPattern\TrainPattern\obj\Debug\netcoreapp2.1\TrainPattern.AssemblyInfo.cs
+D:\Repo\TrainPattern\TrainPattern\obj\Debug\netcoreapp2.1\TrainPattern.dll
+D:\Repo\TrainPattern\TrainPattern\obj\Debug\netcoreapp2.1\TrainPattern.pdb
