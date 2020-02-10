@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace TaskDirectory1
 {
-    public class PngStrategy: IFileHandler
+    public class PngStrategy: IFileService
     {
         public bool IsSuitable(byte[] s)
         {

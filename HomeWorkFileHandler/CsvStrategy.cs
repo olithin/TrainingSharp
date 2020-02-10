@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace TaskDirectory1
 {
-    public class CsvStrategy: IFileHandler
+    public class CsvStrategy: IFileService
     {
         public bool IsSuitable(byte[] s)
         {

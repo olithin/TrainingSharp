@@ -3,7 +3,7 @@ using System.Text;
 
 namespace TaskDirectory1
 {
-    public class TextStrategy: IFileHandler
+    public class TextStrategy: IFileService
     {
         public bool IsSuitable(byte[] s)
         {

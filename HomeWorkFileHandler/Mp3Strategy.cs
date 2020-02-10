@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace TaskDirectory1
 {
-    public class Mp3Strategy: IFileHandler
+    public class Mp3Strategy: IFileService
     {
         public bool IsSuitable(byte[] s)
         {

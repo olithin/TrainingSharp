@@ -8,22 +8,25 @@ namespace TaskDirectory1
         static void Main(string[] args)
         {
             Console.WriteLine("Please insert the path of working directory : ");
-            var insertValue = Console.ReadLine();
+            var insertValue = Environment.CurrentDirectory;
+            Console.WriteLine(insertValue);
 
-            var directoryInfo = Directory.GetFiles(insertValue);
-            foreach (var file in directoryInfo)
+            var files = Directory.GetFiles(insertValue,
+                "*.*",
+                SearchOption.AllDirectories);
+            
+            foreach (var file in files)
             {
+                var ext = Path.GetExtension(file);
+                var isDefined = Enum.IsDefined(typeof(Extension), ext.Replace(".",""));
+                if (isDefined)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(file, Console.ForegroundColor);
+                    Console.ResetColor();
+                    new ContentFactory().GetFileInfo(file, ext);
+                }
                 Console.WriteLine(file);
-            }
-
-            foreach (var item in directoryInfo)
-            {
-                var ext = Path.GetExtension(item);
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(item, Console.ForegroundColor);
-                Console.ResetColor();
-                var array = File.ReadAllBytes(item);
-                new ContentFactory().GetFileInfo(ext, array);
             }
             Console.ReadKey();
         }

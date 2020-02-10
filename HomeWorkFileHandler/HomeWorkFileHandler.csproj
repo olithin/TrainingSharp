@@ -16,9 +16,6 @@
       <None Update="temp\fghy.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="temp\1.png">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
       <None Update="temp\2.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
@@ -29,6 +26,9 @@
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
       <None Update="temp\Miley Cyrus - The Backyard Sessions - Jolene.mp3">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="temp\1.png">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>

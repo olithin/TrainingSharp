@@ -1,12 +1,13 @@
 using System;
+using System.IO;
 
 namespace TaskDirectory1
 {
     public class ContentFactory
     {
-        public void GetFileInfo(string ext, byte[] bytes)
+        public void GetFileInfo(string file, string ext)
         {
-
+            var bytes = File.ReadAllBytes(file);
             switch (ext)
             {
                 case ".txt":
@@ -25,6 +26,5 @@ namespace TaskDirectory1
                     throw new ArgumentException("No type format provided");
             }
         }
-
     }
 }

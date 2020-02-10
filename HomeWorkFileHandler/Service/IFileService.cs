@@ -1,6 +1,6 @@
 namespace TaskDirectory1
 {
-    public interface IFileHandler
+    public interface IFileService
     {
         bool IsSuitable(byte[] s); 
         string GetInfo(byte[] d); 
