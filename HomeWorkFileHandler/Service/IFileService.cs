@@ -1,4 +1,4 @@
-namespace TaskDirectory1
+namespace TaskDirectory1.Service
 {
     public interface IFileService
     {

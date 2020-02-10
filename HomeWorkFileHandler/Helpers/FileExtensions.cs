@@ -1,6 +1,6 @@
-namespace TaskDirectory1
+namespace TaskDirectory1.Helpers
 {
-    public enum Extension
+    public enum FileExtensions
     {
         csv,
         txt,

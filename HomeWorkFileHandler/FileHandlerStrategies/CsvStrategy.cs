@@ -1,20 +1,19 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using TaskDirectory1.Service;
 
-namespace TaskDirectory1
+namespace TaskDirectory1.FileHandlerStrategies
 {
-    public class CsvStrategy: IFileService
+    public class CsvStrategy: AbstractFileFormat
     {
-        public bool IsSuitable(byte[] s)
+        public override bool IsSuitable(byte[] s)
         {
             //NONE/VARIES
             return true;
         }
 
-        public string GetInfo(byte[] bytes)
+        public override string GetInfo(byte[] bytes)
         {
             // выводим первую строку, отдельно показываем какой разделитель используются
             // (нужно построить регурярное выражение, детектор патернов повторений)
@@ -33,11 +32,6 @@ namespace TaskDirectory1
             Console.WriteLine("Separator count: " + separator.Count);
 
             return t.ToString();
-        }
-        public void HandleFile(byte[] bytes)
-        {
-            IsSuitable(bytes);
-            GetInfo(bytes);
         }
     }
 }

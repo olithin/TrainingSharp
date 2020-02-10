@@ -1,7 +1,8 @@
 using System;
 using System.IO;
+using TaskDirectory1.FileHandlerStrategies;
 
-namespace TaskDirectory1
+namespace TaskDirectory1.Service
 {
     public class ContentFactory
     {

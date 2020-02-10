@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using TaskDirectory1.Helpers;
+using TaskDirectory1.Service;
 
 namespace TaskDirectory1
 {
@@ -18,7 +20,7 @@ namespace TaskDirectory1
             foreach (var file in files)
             {
                 var ext = Path.GetExtension(file);
-                var isDefined = Enum.IsDefined(typeof(Extension), ext.Replace(".",""));
+                var isDefined = Enum.IsDefined(typeof(FileExtensions), ext.Replace(".",""));
                 if (isDefined)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
