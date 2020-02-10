@@ -26,7 +26,10 @@ namespace TaskDirectory1
                     Console.ResetColor();
                     new ContentFactory().GetFileInfo(file, ext);
                 }
-                Console.WriteLine(file);
+                else
+                {
+                    Console.WriteLine(file);    
+                }
             }
             Console.ReadKey();
         }
