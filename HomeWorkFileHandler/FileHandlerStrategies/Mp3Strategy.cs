@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using TaskDirectory1.Service;
 
 namespace TaskDirectory1.FileHandlerStrategies
@@ -8,11 +7,7 @@ namespace TaskDirectory1.FileHandlerStrategies
     {
         public override bool IsSuitable(byte[] s)
         {
-            var h = ConvertByteToHex(s);
-            if ( h!= "494433")
-            {
-                throw new Exception("Format is not correct");  
-            }
+            Console.WriteLine("Mp3 file is suitable: ");
             return true;
         }
 
@@ -20,11 +15,6 @@ namespace TaskDirectory1.FileHandlerStrategies
         {
             // -- выводим заголовок, достаточно Version и Layer https://ru.wikipedia.org/wiki/MP3
             return "finish";
-        }
-        private string ConvertByteToHex(byte[] byteData)
-        {
-            var hexValues = BitConverter.ToString(byteData.Take(3).ToArray()).Replace("-", "");
-            return hexValues;
         }
     }
 }

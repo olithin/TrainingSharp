@@ -8,6 +8,7 @@ namespace TaskDirectory1.FileHandlerStrategies
     {
         public override bool IsSuitable(byte[] s)
         {
+            Console.WriteLine("TXT file is suitable: ");
             return true;
         }
 
