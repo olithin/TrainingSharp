@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using TaskDirectory1.Service;
 
 namespace TaskDirectory1
@@ -8,17 +7,12 @@ namespace TaskDirectory1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please insert the path of working directory : ");
             var insertValue = Environment.CurrentDirectory;
-            Console.WriteLine(insertValue);
+            Console.WriteLine($"Path of the project folder: {insertValue}");
 
-            var files = Directory.GetFiles(insertValue, "*.*",SearchOption.AllDirectories);
+            var fileHandler = new FileHandler();
+            fileHandler.SelectFile(insertValue);
 
-            foreach (var file in files)
-            {
-                var byteData = File.ReadAllBytes(file);
-                new Strategy().SelectSuitable(file, byteData);
-            }
             Console.ReadKey();
         }
     }

@@ -1,14 +1,10 @@
-using System;
-using TaskDirectory1.Service;
-
-namespace TaskDirectory1.FileHandlerStrategies
+namespace TaskDirectory1.Strategies
 {
-    public class Mp3Strategy: AbstractFileFormat
+    public class Mp3FileStrategy : AbstractStrategy
     {
         public override bool IsSuitable(byte[] s)
         {
-            Console.WriteLine("Mp3 file is suitable: ");
-            return true;
+            return ConvertByteToHex(s) == "4944330400000000";
         }
 
         public override string GetInfo(byte[] d)
