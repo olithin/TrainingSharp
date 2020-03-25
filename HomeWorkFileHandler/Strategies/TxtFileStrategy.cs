@@ -1,9 +1,10 @@
 using System;
 using System.Text;
+using TaskDirectory1.Strategies.Base;
 
 namespace TaskDirectory1.Strategies
 {
-    public class TxtFileStrategy : AbstractStrategy
+    public class TxtFileStrategy : StrategyBase
     {
         public override bool IsSuitable(byte[] s)
         {

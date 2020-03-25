@@ -1,10 +1,11 @@
 using System;
 using System.Text;
 using System.Text.RegularExpressions;
+using TaskDirectory1.Strategies.Base;
 
 namespace TaskDirectory1.Strategies
 {
-    public class CsvFileStrategy : AbstractStrategy
+    public class CsvFileStrategy : StrategyBase
     {
         public override bool IsSuitable(byte[] s)
         {

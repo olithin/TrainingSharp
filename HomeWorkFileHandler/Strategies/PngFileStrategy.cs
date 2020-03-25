@@ -1,8 +1,9 @@
 using System;
+using TaskDirectory1.Strategies.Base;
 
 namespace TaskDirectory1.Strategies
 {
-    public class PngFileStrategy : AbstractStrategy
+    public class PngFileStrategy : StrategyBase
     {
         private string Signature { get; set; }
 

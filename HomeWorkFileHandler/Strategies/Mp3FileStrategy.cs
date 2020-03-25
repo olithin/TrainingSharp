@@ -1,6 +1,8 @@
+using TaskDirectory1.Strategies.Base;
+
 namespace TaskDirectory1.Strategies
 {
-    public class Mp3FileStrategy : AbstractStrategy
+    public class Mp3FileStrategy : StrategyBase
     {
         public override bool IsSuitable(byte[] s)
         {

@@ -14,13 +14,15 @@ namespace TaskDirectory1.Service
 
             foreach (var file in files)
             {
-                SelectFileByExtensionToList(file, list);
+                list.AddRange(SelectFileByExtensionToList(file));
             }
             GetFileHandler(list);
         }
 
-        private void SelectFileByExtensionToList(string file, List<string> listDetailsFiles)
+        private IList<string> SelectFileByExtensionToList(string file)
         {
+            
+            var listDetailsFiles=new List<string>();
             if (DataType.DetailsTypes.Contains(Path.GetExtension(file)))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -28,6 +30,7 @@ namespace TaskDirectory1.Service
             }
             Console.WriteLine(file);
             Console.ResetColor();
+            return listDetailsFiles;
         }
 
         private void GetFileHandler(List<string> files)
