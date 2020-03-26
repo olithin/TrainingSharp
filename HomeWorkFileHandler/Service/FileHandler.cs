@@ -19,7 +19,7 @@ namespace TaskDirectory1.Service
             GetFileHandler(list);
         }
 
-        private IList<string> SelectFileByExtensionToList(string file)
+        public IList<string> SelectFileByExtensionToList(string file)
         {
             
             var listDetailsFiles=new List<string>();
@@ -60,7 +60,7 @@ namespace TaskDirectory1.Service
             }
         }
 
-        private void GetFileHandler(FileHandlerFactory fileHandlerFabric, string fileName)
+        public void GetFileHandler(FileHandlerFactory fileHandlerFabric, string fileName)
         {
             var currentStrategy = fileHandlerFabric.GetInfoFile(fileName);
 
